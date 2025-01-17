@@ -45,7 +45,7 @@
     width: 4rem;
     height: 4rem;
     background: no-repeat 50%;
-    border: 1px solid var(--white70p);
+    /* border: 1px solid var(--white70p); */
     border-radius: 50%;
 }
 .util-menu button.btn-menu {
@@ -57,7 +57,7 @@
 
 .visual {
     height: 52rem;
-    background: skyblue;
+    /* background: skyblue; */
     position: relative;
 }
 
