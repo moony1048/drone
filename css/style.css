@@ -2,6 +2,8 @@
 
 .inner {
     width: 38rem;
+    width: 88.785%;
+
     margin: 0 auto;
     background: rgba(255, 255, 0, 0.1);
 }
@@ -90,6 +92,7 @@
     transform: translateX(-50%);
     /* border: 1px solid #000; */
     width: 38rem;
+    width: 88.785%;
 }
 
 .visual-title h2 {
@@ -112,4 +115,257 @@
     background: #fff;
     color: var(--main-color);
     margin: 4.8rem auto 0;
+}
+
+.introduce {
+    background: #f5f5f5;
+    padding: 4rem 0;
+}
+
+.introduce-list li {
+    display: flex;
+    gap: 4rem;
+    /* border: 1px solid #000; */
+    min-height: 16.8rem;
+    padding: 1.2rem 0;
+}
+
+.introduce-list li:before {
+    content: "";
+    display: block;
+    width: 9rem;
+    height: 9rem;
+    background: no-repeat 50% / cover;
+    /* /하면 background의 사이즈 명령 , cover=100% auto*/
+}
+
+.introduce-list li:nth-child(1)::before {
+    background-image: url(../img/intro-ico1.png);
+}
+.introduce-list li:nth-child(2)::before {
+    background-image: url(../img/intro-ico2.png);
+}
+.introduce-list li:nth-child(3)::before {
+    background-image: url(../img/intro-ico3.png);
+}
+.introduce-list li:nth-child(4)::before {
+    background-image: url(../img/intro-ico4.png);
+}
+
+.introduce-list li dl {
+    width: 24.9rem;
+    width: 65.5263%;
+}
+
+.introduce-list li dl dt {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.introduce-list li dl dd {
+    margin-top: 0.8rem;
+    line-height: 1.5;
+}
+
+.introduce .btn-black {
+    margin: 0 auto;
+}
+
+.competitive {
+    padding: 6rem 0;
+    background: url(../img/drone-pic3.jpg) no-repeat 100% 100% /70% auto; /* 100%, 100% -> x, y축 기준으로 끝 */
+}
+
+.competitive h2 + p {
+    margin-top: 2rem;
+}
+
+.competitive-list {
+    display: flex;
+    gap: 1.1rem;
+
+    /* 1. 카운터 세팅 */
+    counter-reset: competitive; /* '' 이거  안에 쓰면 안 됨 */
+}
+
+.comptive-list-wrap {
+    /* border: 1px solid #f00; */
+    overflow-x: scroll; /* ovxs */
+    margin-top: 4.1rem;
+}
+
+.competitive-list li {
+    border: 1px solid #fff;
+    background: var(--white80p);
+    border-radius: 1rem;
+    backdrop-filter: blur(5px);
+    width: 38rem;
+    height: 12.5rem;
+
+    flex-shrink: 0; /* fxsh0: 줄어들지 말라는 명령 */
+
+    padding: 1rem;
+
+    display: flex;
+
+    gap: 2.4rem;
+
+    /* 2. 카운터 증가 */
+    counter-increment: competitive;
+}
+
+.competitive-list li::before {
+    /* 3. 카운터 적용 */
+    content: counter(competitive);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 1px solid var(--black50p);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.competitive-list li p {
+    font-size: 1.4rem;
+    color: #a7acbc;
+
+    /* 4줄 제한 */
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-list li {
+    /* border: 10px solid #f00; */
+    position: relative;
+    padding-bottom: 25rem;
+    background: #fff;
+}
+
+.product-list li figure {
+    /* aspect-ratio: 1/1.215; */
+    height: 52rem;
+}
+
+.product-list li .product-con {
+    width: 38rem;
+    min-height: 45rem;
+    background: #f5f5f5;
+    position: absolute;
+    bottom: 2.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-list li .product-con h3 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.product-list li .product-con p {
+    margin-top: 2.4rem;
+}
+
+.product-list li .product-con .btn-black {
+    margin-top: 2.4rem;
+}
+
+.newsletter {
+    /* aspect-ratio: 1/1.028; */
+    height: 44rem;
+
+    background: url(../img/newsletter-bg.jpg) no-repeat 50% / cover fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-con {
+    width: 38rem;
+}
+
+.newsletter-con h4 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.newsletter-con .form-wrap {
+    margin-top: 4.8rem;
+    height: 4.8rem;
+    border: 1px solid #fff;
+    border-radius: 6rem;
+    background: var(--white20p);
+
+    display: flex;
+    overflow: hidden;
+}
+
+.newsletter-con .form-wrap input {
+    background: transparent;
+    width: calc(100% - 8.4rem);
+    color: #fff; /* 사용자가 input에 입력했을 때 나오는 색깔 */
+
+    padding: 1rem 2.8rem;
+}
+
+.newsletter-con .form-wrap input::placeholder {
+    color: #fff;
+}
+
+.newsletter-con .form-wrap button {
+    width: 8.4rem;
+    background: #fff;
+    color: var(--main-color);
+    border-radius: 6rem;
+}
+
+#footer {
+    background: #2c2e33;
+    padding: 8rem 0;
+}
+
+#footer .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.8rem;
+}
+
+#footer .foot-logo {
+    display: block;
+    width: 24.6rem;
+    height: 3.6rem;
+    background: url(../img/foot-logo.png) no-repeat 50% / contain; /* contain -> 이 공간 안에 포함되도록 */
+    /* border: 1px solid #f00; */
+}
+
+#footer p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--white60p);
+    text-align: center;
+    /* border: 1px solid #ff0; */
+}
+
+#footer p em {
+    display: block;
+    margin-top: 0.5rem;
 }

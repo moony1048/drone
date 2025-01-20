@@ -87,4 +87,22 @@ body {
     /* 영문폰트과 한글폰트 같이 쓸 때 영문폰트 먼저 쓰고 한글폰트 쓰기 */
     font: 1.6rem/1.7 "Montserrat", sans-serif;
     color: var(--text-color);
+    text-transform: capitalize; /* ttc: 첫 글자를 대문자 */
+    word-break: keep-all; /* wbka: 어절 단위로 줄바꿈 */
+}
+
+/* 텍스트에 그라데이션 적용 */
+.text-gra {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: transparent; */
+    display: inline-block;
+}
+
+.sec-title {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.2;
 }
